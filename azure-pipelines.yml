@@ -1,19 +1,29 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+name: ML API Continuous Integration
 
-trigger:
-- main
+on: [push]
 
-pool:
-  vmImage: ubuntu-latest
+jobs:
+  build:
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+    runs-on: ubuntu-latest
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v4.2.0
+      with:
+        python-version: 3.7
+    - name: Install dependencies
+      run: |
+        make install
+    - name: Lint with pylint
+      run: |
+        make lint
+    - name: Test with pytest
+      run: |
+        make test
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
