@@ -1,4 +1,4 @@
-git clone git@github.com:vishnu-raju/ml_api_with_cicd.git
-cd ml_api_with_cicd
+git clone git@github.com:paulnoc/PaulNO-ML-api-CICD.git
+cd PaulNO-ML-api-CICD
 make all
-az webapp up --name vnrmlapi --resource-group AzureDevops --runtime "PYTHON:3.7"
+az webapp up --name pnomlapi --resource-group Azuredevops --runtime "PYTHON:3.7"
