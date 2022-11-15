@@ -12,7 +12,7 @@ variables:
   environmentName: 'flask-ml-service'
 
   # Agent pool name
-  pool:
+  pool: Azure Pipelines
   vmImage: ubuntu-latest
 
   # Project root folder. Point to the folder containing manage.py file.
