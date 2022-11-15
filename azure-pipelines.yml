@@ -11,9 +11,8 @@ variables:
   # Environment name
   environmentName: 'flask-ml-service'
 
-  # Agent pool name
-  pool: 
-    vmImage: 'ubuntu-latest'
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -26,7 +25,8 @@ stages:
   displayName: Build stage
   jobs:
   - job: BuildJob
-    pool: $(pool)
+    pool:
+      vmImage: $(vmImageName)
     steps:    
     - script: |
         python3.7 -m pip install --upgrade pip
