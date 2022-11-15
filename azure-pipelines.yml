@@ -13,7 +13,7 @@ variables:
 
   # Agent pool name
   pool:
-    vmImage: ubuntu-latest
+  vmImage: ubuntu-latest
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
