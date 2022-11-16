@@ -12,7 +12,7 @@ variables:
   environmentName: 'flask-ml-service'
 
   # Agent VM image name
-  vmImageName: 'ubuntu OS'
+  vmImageName: 'ubuntu-latest'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -24,7 +24,7 @@ stages:
 - stage: Build
   displayName: Build stage
   jobs:
-  - job: Linux
+  - job: BuildJob
     pool:
       vmImage: $(vmImageName)
     steps:    
