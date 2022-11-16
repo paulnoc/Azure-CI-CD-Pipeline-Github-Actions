@@ -24,7 +24,7 @@ stages:
 - stage: Build
   displayName: Build stage
   jobs:
-  - job: BuildJob
+  - job: Linux
     pool:
       vmImage: $(vmImageName)
     steps:    
