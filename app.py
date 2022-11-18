@@ -20,7 +20,7 @@ def scale(payload):
 
 @app.route("/")
 def home():
-    html = "<h3>This is Paul's Sklearn Prediction Home With CICD process done</h3>"
+    html = "<h3>This is Paul's Sklearn Prediction Home With CICD process</h3>"
     return html.format(format)
 
 # TO DO:  Log out the prediction value
